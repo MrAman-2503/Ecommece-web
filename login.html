@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .login-container {
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-container">
+    <h2 class="text-center mb-4">Login</h2>
+    <form id="login-form">
+      <div class="form-group">
+        <label for="login-input">Email or Username</label>
+        <input type="text" class="form-control" id="login-input" placeholder="Enter your email or username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+      </div>
+
+       <a class="btn btn-primary btn-block" href="ecommerce.html">Login</a>
+
+
+
+
+
+    </form>
+    <div class="text-center mt-3">
+      Don't have an account? <a href="signup.html">Sign Up</a>
+    </div>
+  </div>
+
+  <!-- Firebase App (the core Firebase SDK) -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+  <!-- Firebase Auth -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+  <!-- Firebase Firestore -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>
+
+  <!-- <script type="">
+    Initialize Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyCQld1Y38Yb11QqhtM4qh13p0xYtu52ldQ",
+      authDomain: "what-to-watch-manas.firebaseapp.com",
+      projectId: "what-to-watch-manas",
+      storageBucket: "what-to-watch-manas.appspot.com",
+      messagingSenderId: "917514439139",
+      appId: "1:917514439139:web:f84d534652bb13b3b738d6",
+      measurementId: "G-RGRCFRDRDP"
+    
+    firebase.initializeApp(firebaseConfig
+    // Get a reference to the Firestore database
+    const db = firebase.firestore(
+    // Handle login form submission
+    var loginForm = document.getElementById('login-form');
+    loginForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var loginInput = document.getElementById('login-input').value;
+      var password = document.getElementById('password').valu
+      // Check if the login input is an email or a username
+      if (isValidEmail(loginInput)) {
+        // Login with email
+        firebase.auth().signInWithEmailAndPassword(loginInput, password)
+          .then(function (userCredential) {
+            // Login successful
+            alert('Login successful!');
+            // Redirect to another page or do something else
+          })
+          .catch(function (error) {
+            // Login failed
+           alert('Login failed:', error.message);
+            // Show an error message to the user
+          });
+      } else {
+        // Login with username
+        db.collection('users')
+          .where('username', '==', loginInput)
+          .get()
+          .then(function (querySnapshot) {
+            if (querySnapshot.size > 0) {
+              // Find the user document with the matching username
+              const userDoc = querySnapshot.docs[0];
+              const email = userDoc.data().emai
+              // Sign in with the retrieved email and provided password
+              firebase.auth().signInWithEmailAndPassword(email, password)
+                .then(function (userCredential) {
+                  // Login successful
+                  console.log('Login successful!');
+                  // Redirect to another page or do something else
+                })
+                .catch(function (error) {
+                  // Login failed
+                  console.error('Login failed:', error.message);
+                  // Show an error message to the user
+                });
+            } else {
+              console.error('User not found with the provided username');
+              // Show an error message to the user
+            }
+          })
+          .catch(function (error) {
+            console.error('Error retrieving user:', error);
+            // Show an error message to the user
+          });
+      }
+    }
+    // Helper function to validate email format
+    function isValidEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+  </script> -->
+</body>
+
+</html>>
