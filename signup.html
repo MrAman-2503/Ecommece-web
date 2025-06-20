@@ -28,23 +28,23 @@
         <form id="signup-form">
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" class="form-control" id="username" placeholder="Enter your username">
+                <input type="text" class="form-control" id="username" placeholder="Enter your username" required="Please fill out this field.">
             </div>
             <div class="form-group">
                 <label for="dob">Date of Birth</label>
-                <input type="date" class="form-control" id="dob" placeholder="Enter your date of birth">
+                <input type="date" class="form-control" id="dob" placeholder="Enter your date of birth" required="Please fill out this field.">
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required="Please fill out this field.">
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                <input type="password" class="form-control" id="password" placeholder="Enter your password" required="Please fill out this field.">
             </div>
             <div class="form-group">
                 <label for="confirm-password">Confirm Password</label>
-                <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your password">
+                <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your password" required="Please fill out this field.">
             </div>
             <a type="submit" href="ecommerce.html" class="btn btn-primary btn-block" >Sign Up</a>
         </form>
@@ -58,7 +58,7 @@
     <!-- Firebase Auth -->
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
 
-    <!-- <script>
+     <script>
 
         const firebaseConfig = {
             apiKey: "AIzaSyCQld1Y38Yb11QqhtM4qh13p0xYtu52ldQ",
@@ -123,7 +123,7 @@
 
                 });
         });
-    </script> -->
+    </script> 
 </body>
 
 </html>
